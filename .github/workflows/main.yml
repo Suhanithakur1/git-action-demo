@@ -1,5 +1,15 @@
-jobs:
-  test:
-    steps:
-      - name: 23f3003502@ds.study.iitm.ac.in
+name: Test Workflow
+
+on:  
+  push  # Runs when you push code
+
+jobs:  
+  test:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Checkout Repository  
+        uses: actions/checkout@v3  
+
+      - name: 23f3003502@ds.study.iitm.ac.in  
         run: echo "Hello, world!"
+
